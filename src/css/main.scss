@@ -1,10 +1,31 @@
 /* Your SCSS here. */
+body {
+    margin: 0;
+    padding: 0;
+}
 
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 45px; // account for sticky navbar when smoothscrolling
+}
+
+div {
+    padding: 0;
+}
+
+/* navbar ------------------------------------ */
 #navbar {
     position: sticky;
     top: 0;
-    overflow: hidden;
-    background-color: #333;
+    // overflow: hidden;
+    background-color: rgba(242, 142, 0, 1);
+    width: 100%;
+
+    height: 50px;
+    /* fixed height */
+    line-height: 50px;
+
+    border-bottom: 3px solid rgba(218, 128, 0, 1);
 }
 
 #navbar a {
@@ -12,17 +33,136 @@
     display: block;
     color: #f2f2f2;
     text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
+    padding: 0 16px;
     font-size: 17px;
+    line-height: 50px;
+
+    text-decoration: none;
 }
 
 #navbar a:hover {
-    background-color: #ddd;
-    color: black;
+    background-color: white;
+    color: rgba(242, 142, 0, 1);
 }
 
 #navbar a.active {
-    background-color: #04AA6D;
+    background-color: rgba(255, 231, 136, 1);
+    color: rgba(242, 142, 0, 1);
+    border-bottom: 3px solid white;
+}
+
+/* header ------------------------ */
+.header {
+    height: auto;
+    padding-top: 50px;
+    padding-bottom: 100px;
+    background-color: rgba(255, 231, 136, 1);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* vertical center children */
+    align-items: center;
+    /* horizontal center children */
+    text-align: center;
     color: white;
+}
+
+#headertextbox {
+    height: 300px;
+    width: 80%;
+    background-color: rgba(242, 142, 0, 1);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+/* footer --------------------------*/
+.footer {
+    padding: 60px;
+    text-align: center;
+    background-color: rgba(255, 231, 136, 1);
+}
+
+
+.footer h1 {
+    font-size: 40px;
+}
+
+.container {
+    display: flex;
+}
+
+.column {
+    flex: 1; // equal column width
+    min-width: 200px; // min column size
+    background-color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+// section styling -----------------------
+// id is independant of class - same ids have same styling regardless of class
+
+.section {
+    height: 600px;
+    background-color: #F28E00;
+    padding: 0;
+    margin: 0;
+}
+
+.section h2 {
+    // remove weird spacing at top
+    margin: 0;
+    padding: 0;
+    margin-bottom: 20px;
+    /* controlled space */
+}
+
+.section p {
+    // remove weird spacing at top
+    margin: 0;
+    padding: 0;
+    margin-bottom: 10px;
+}
+
+
+// Section Specific Styling
+
+#Gallery {
+    text-align: center;
+}
+
+#About {
+    height: 300px;
+    background:
+        linear-gradient(rgba(242, 142, 0, .6), rgba(242, 142, 0, .6)), //translucent overlay
+        url('../assets/oranges-in-a-box.jpg');
+    background-size: cover; // fill div
+    background-position: center; // center image
+    background-attachment: fixed; // STAY FIXED WHILE SCROLLING
+
+    display: flex;
+    flex-direction: column;
+
+    color: white; // text color is white 
+    text-align: center; // center text
+
+    justify-content: center; // vertical center
+    align-items: center; // horizontal center
+}
+
+#ContactMe {
+    display: flex; // flexbox
+    flex-direction: column; // stack items vertically
+    justify-content: center; // vertical centering
+    align-items: center; // horizontal centering
+
+    text-align: center; // centering text horizontally
+
+    color: white; // text color white
 }
