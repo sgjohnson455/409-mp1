@@ -14,10 +14,12 @@
     <div id="navbar">
         <a href="#header">Home</a>
         <a href="#Gallery">Gallery</a>
+        <a href="#Instruct">Instructions</a>
         <a href="#About">About</a>
         <a href="#ContactMe">Contact</a>
     </div>
 
+    <!-- header -->
     <div class="header" id="header">
         <video autoplay muted loop id="headerVideo">
             <source src="assets/orangecuttingvideo.mp4" type="video/mp4">
@@ -25,27 +27,110 @@
 
 
         <div id="headertextbox">
-            <h1>Oranges</h1>
-            <p>A website about one of my favorite foods and one of my favorite colors.</p>
+            <h1>Orange</h1>
+            <p>A Website About My Favorite Food And My Favorite Color</p>
         </div>
 
     </div>
 
+    <!-- gallery -->
     <div class="section" id="Gallery">
         <h2>Gallery</h2>
+
+        <div id="Gallery">
+            <div class="gallery-grid">
+                <img src="assets/orangetypes/bloodorange.webp" data-title="Blood Orange"
+                    data-description="A hybrid of the pomelo and the tangerine, blood oranges, originally from the southern Mediterranean region, are easily distinguishable with the red splotches on their skin. ">
+                <img src="assets/orangetypes/caracaraorange.jpg" data-title="Cara Cara Orange"
+                    data-description="A cross between the Washington navel and Brazilian Bahia, Cara Cara oranges are a result of a mutation in the navel orange that was first discovered in the mid-’70s in Valencia, Venezuela. From the outside, identifying a Cara Cara orange can be tricky — they’re similar in size to a navel orange and they have a bright orange rind. What makes them stand out is their distinct red-pink flesh that resembles a Ruby red grapefruit.  ">
+                <img src="assets/orangetypes/valencia.jpg" data-title="Valencia Orange"
+                    data-description="A hybrid of a mandarin and a pomelo, the Valencia variety has tons of juice so you get more bang for your buck when it comes to making a fresh glass. When you juice them, they won’t turn bitter like the navel variety; they taste well-balanced and sweet-tart instead.">
+                <img src="assets/orangetypes/clementine.jpg" data-title="Clementine"
+                    data-description="A variety of mandarin, clementines are a cross between a Mandarin and a sweet orange, with a slightly more oval shape and a flat spot on the top and bottom.">
+                <img src="assets/orangetypes/tangelo.jpg" data-title="Tangelo"
+                    data-description="The moniker “tangelo” combines words tangerine and pomelo, because this variety is a cross between a Darcy tangerine and a pomelo or grapefruit. It looks oddly shaped for its protruding knob, and is the size of an adult first. Peel its loose and thin skin and you’ll find thick, juicy pulp inside when you bite into it. ">
+                <img src="assets/orangetypes/navel orange.png" data-title="Navel Orange"
+                    data-description="Navel oranges are easy to identify: They have a navel-like mark, resembling a belly button, on the bottom, and a translucent yellow-orange flesh. ">
+
+
+            </div>
+
+            <!-- source button -->
+            <div class="source-button-div">
+                <a href="https://www.thekitchn.com/types-of-oranges-23656324" target="_blank" class="source-button">
+                    Source
+                </a>
+            </div>
+
+        </div>
+
+        <!-- modal -->
+        <div id="modal" class="modal">
+            <span class="close">&times;</span>
+            <img class="modal-content" id="modal-img">
+            <div id="modal-text">
+                <h2 id="modal-title"></h2>
+                <p id="modal-description"></p>
+            </div>
+        </div>
+
     </div>
 
+    <!-- how to section -->
+    <div class="section" id="Instruct">
+        <h2>How to Eat</h2>
+        <div class="slideshow-container">
+
+            <!-- Full-width images with number and caption text -->
+            <div class="mySlides fade">
+                <img src="assets/wholeorange.jpg">
+                <div class="text">Step 1: Get Your Orange</div>
+            </div>
+
+            <div class="mySlides fade">
+                <img src="assets/midpeel orange.jpg">
+                <div class="text">Step 2: Peel Off the Skin</div>
+            </div>
+
+            <div class="mySlides fade">
+                <img src="assets/nopithorange.jpg">
+                <div class="text">Step 3: Remove Pith</div>
+            </div>
+            <div class="mySlides fade">
+                <img src="assets/orangesliceplate.jpg">
+                <div class="text">Step 4: Plate and Serve</div>
+            </div>
+
+            <!-- next and prev buttons (use html tags instead of imgs)-->
+            <a class="prev">&#10094;</a>
+            <a class="next">&#10095;</a>
+        </div>
+
+        <br>
+
+        <!-- Progress Dots (for user reference) -->
+        <div style="text-align:center">
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+    </div>
+
+    <!-- about -->
     <div class="section" id="About">
         <h2>About</h2>
+        <p>This website is about both oranges and the color orange</p>
     </div>
 
+    <!-- contact -->
     <div class="section" id="ContactMe">
         <h2>Contact Me</h2>
     </div>
 
+    <!-- footer -->
     <div class="footer">
-        <h1>Footer</h1>
-        <div class="container">
+        <div class="footerdetails">
             <div class="column">testcol 1</div>
             <div class="column">testcol 2</div>
             <div class="column">testcol 3</div>
