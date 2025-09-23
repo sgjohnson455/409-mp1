@@ -53,25 +53,34 @@ div {
 
 /* header ------------------------ */
 .header {
+    position: relative;
+    /* allow positioning of video and text */
     height: auto;
     padding-top: 50px;
     padding-bottom: 100px;
-    background-color: rgba(255, 231, 136, 1);
-
     display: flex;
     flex-direction: column;
     justify-content: center;
-    /* vertical center children */
     align-items: center;
-    /* horizontal center children */
     text-align: center;
     color: white;
+    overflow: hidden; // hides extra video and elements
+}
+
+#headerVideo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; // fill div
+    z-index: -1; // layer behind text
 }
 
 #headertextbox {
     height: 300px;
     width: 80%;
-    background-color: rgba(242, 142, 0, 1);
+    border: 3px solid white;
 
     display: flex;
     flex-direction: column;
