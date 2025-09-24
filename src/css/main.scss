@@ -170,18 +170,28 @@ div {
     background-size: cover; // fill div
     background-position: center; // center image
     background-attachment: fixed; // STAY FIXED WHILE SCROLLING
-
     display: flex;
     flex-direction: column;
-
     color: white; // text color is white 
     text-align: center; // center text
-
     justify-content: center; // vertical center
     align-items: center; // horizontal center
+
+    p {
+        font-size: 25px;
+        width: 80%;
+        max-width: 800px;
+    }
 }
 
-#ContactMe {
+#About .image {
+    width: 25%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+
+#Footer {
     display: flex; // flexbox
     flex-direction: column; // stack items vertically
     justify-content: center; // vertical centering
@@ -189,13 +199,14 @@ div {
 
     text-align: center; // centering text horizontally
 
-    color: white; // text color white
+    height: 150px;
+    background-color: $orange-light;
 }
 
 .contactdetails {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 10px;
     width: 80%;
     max-width: 800px; // keeps it from stretching too wide
     justify-content: center;
@@ -204,12 +215,9 @@ div {
 .column {
     flex: 1;
     min-width: 150px;
-    background-color: white;
     padding: 10px;
-    border-radius: 10px;
     text-align: center;
     color: $orange-dark;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease;
 
     h3 {
@@ -360,7 +368,9 @@ div {
 }
 
 // Modal --------------------------------------------------
+
 .modal {
+    animation: fadeIn 0.5s ease forwards;
     display: none;
     position: fixed;
     z-index: 1000;
@@ -415,6 +425,19 @@ div {
 .close:hover {
     color: $orange-main;
 }
+
+
+// Animation
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
 
 // Source Button -----------------------------------------
 .source-button-container {

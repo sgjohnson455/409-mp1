@@ -2,7 +2,7 @@
 // console.log('Hello World!')
 
 // select sections to look for and navbar object
-const sections = document.querySelectorAll('.header, .section, .footer');
+const sections = document.querySelectorAll('.header, .section');
 const navItems = document.querySelectorAll('#navbar a');
 
 // Interaction Observer - tracks objects in the viewport
