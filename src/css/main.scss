@@ -347,7 +347,7 @@ div {
 }
 
 .modal-content {
-    max-width: 80%;
+    width: 60%;
     max-height: 60%;
     border-radius: 12px;
     margin-bottom: 15px;
@@ -358,6 +358,7 @@ div {
 #modal-text {
     text-align: center;
     color: $orange-light;
+    width: 60%;
 }
 
 #modal-text h2 {
