@@ -27,19 +27,20 @@ div {
 #navbar {
     position: sticky;
     top: 0;
-    // overflow: hidden;
     background-color: $orange-main;
     width: 100%;
-
-    height: 50px;
-    line-height: 50px;
-
+    height: 80px; // taller at top
+    line-height: 80px; // vertically center links
     border-bottom: 3px solid rgba(218, 128, 0, 1);
-
-    z-index: 100; // ensure navbar is for sure above everything else
+    z-index: 100;
+    transition: all 0.3s ease; // smooth shrinking
 }
 
-// Navbar Links
+#navbar.shrink {
+    height: 50px; // smaller on scroll
+    line-height: 50px;
+}
+
 #navbar a {
     float: left;
     display: block;
@@ -47,9 +48,8 @@ div {
     text-align: center;
     padding: 0 16px;
     font-size: 17px;
-    line-height: 50px;
-
     text-decoration: none;
+    transition: color 0.3s ease, background-color 0.3s ease;
 }
 
 #navbar a:hover {
@@ -119,30 +119,6 @@ div {
     text-align: center;
 }
 
-// Footer ------------------------------------------------------
-.footer {
-    padding: 60px;
-    text-align: center;
-    background-color: $orange-light;
-}
-
-
-.footer h1 {
-    font-size: 40px;
-}
-
-.footerdetails {
-    display: flex;
-}
-
-// Footer Test Columns
-.column {
-    flex: 1; // equal column width
-    background-color: white;
-    padding: 20px;
-    text-align: center;
-}
-
 // Section Styling -------------------------------------------------
 
 .section {
@@ -187,7 +163,7 @@ div {
 }
 
 #About {
-    height: 300px;
+    height: 600px;
     background:
         linear-gradient(rgba(242, 142, 0, .6), rgba(242, 142, 0, .6)), //translucent overlay
         url('../assets/oranges-in-a-box.jpg');
@@ -216,6 +192,53 @@ div {
     color: white; // text color white
 }
 
+.contactdetails {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    width: 80%;
+    max-width: 800px; // keeps it from stretching too wide
+    justify-content: center;
+}
+
+.column {
+    flex: 1;
+    min-width: 150px;
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    color: $orange-dark;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+
+    h3 {
+        margin-bottom: 10px;
+        color: $orange-main;
+    }
+
+    p {
+        margin-bottom: 15px;
+    }
+
+    a {
+        font-size: 40px;
+        padding-bottom: 10px;
+    }
+}
+
+.social-link {
+    display: inline-block;
+    font-size: 30px;
+    text-decoration: none;
+    color: $orange-main;
+    transition: color 0.3s ease;
+
+    &:hover {
+        color: $orange-dark;
+    }
+}
+
 // Carousel -------------------------------------------------------
 
 * {
@@ -231,19 +254,22 @@ div {
     position: relative;
     overflow: hidden;
     border: 5px solid $orange-main;
+    align-items: center;
 }
 
-.mySlides {
+.carousel {
     display: none;
     width: 100%;
     height: 100%;
 }
 
-.mySlides img {
+.carousel img {
+    display: flex;
     width: 100%;
     height: 100%;
     object-fit: cover;
     display: block;
+    align-items: center;
 }
 
 // Prev + Next
@@ -281,13 +307,16 @@ div {
 
 // Caption Styling
 .text {
-    color: #DA8000;
+    color: $white;
     font-size: 25px;
     padding: 8px 12px;
     position: absolute;
     bottom: 8px;
-    width: 100%;
+    width: 50%;
     text-align: center;
+    left: 25%;
+    background-color: $orange-main;
+    border-radius: 3px;
 }
 
 // Progress Dots

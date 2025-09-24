@@ -47,7 +47,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     function showSlides(n) {
-        let slides = document.getElementsByClassName("mySlides");
+        let slides = document.getElementsByClassName("carousel");
         let dots = document.getElementsByClassName("dot");
 
         if (slides.length === 0) return;
@@ -97,3 +97,13 @@ modal.addEventListener("click", e => {
 });
 
 // Navbar resizing on scroll 
+
+window.addEventListener("scroll", () => {
+    const navbar = document.getElementById("navbar");
+    if (window.scrollY > 50) {
+        navbar.classList.add("shrink");
+    } else {
+        navbar.classList.remove("shrink");
+    }
+});
+
